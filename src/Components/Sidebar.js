@@ -7,12 +7,15 @@ const Sidebar = () => {
 	return (
 		<>
 			<div className="sidebar">
-				<button>
+				<button className="button"
+				onClick={() => setShow
+					(!show)}>
 					{show ? 'Show' : 'Hide'}
 				</button>
 					{show && <h2>Hello React</h2>}
 			</div>
 		</>
 	);
+	}
 
 export default Sidebar;
