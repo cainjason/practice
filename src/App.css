@@ -10,3 +10,12 @@
   background-color: gray;
   color: white;
 }
+
+.button {
+  background-color: red;
+}
+
+.button:hover {
+  background-color: greenyellow;
+  cursor: pointer;
+}

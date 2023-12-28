@@ -1,31 +1,18 @@
-import React, { useRef, useState } from 'react';
+import React, { useState } from 'react';
 
 
 const Sidebar = () => {
-	const [isVisible, setIsVisible] = useState(false);
-
+	const [show, setShow] = useState(true);
 
 	return (
-		// Sidebar code will go here
 		<>
-			<h2> Sidebar </h2>
-			<button 
-				setIsVisible
-					onKeyDown={(e) => {
-						if (e.key === 'Escape') {
-							setIsVisible(false);
-						}
-					}}
-			> Close Sidebar </button>
-
-			<ul>
-				<li> Home </li>
-				<li> About </li>
-				<li> Contact </li>
-			</ul>
+			<div className="sidebar">
+				<button>
+					{show ? 'Show' : 'Hide'}
+				</button>
+					{show && <h2>Hello React</h2>}
+			</div>
 		</>
 	);
-
-};
 
 export default Sidebar;
